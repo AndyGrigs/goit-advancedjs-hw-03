@@ -11,15 +11,14 @@ body {
   background-color: #ededed;
   font-family: 'Arial', sans-serif;
   font-size: 16px;
-  line-height: 1.5; 
+  line-height: 1.5;
 }
 
 h1 {
   text-align: center;
   margin: 20px auto;
-  font-size: 2em;
+  font-size: 1.6em;
 }
-
 
 .wrapper {
   display: flex;
@@ -38,106 +37,39 @@ h1 {
   text-align: center;
 }
 
-
-
-.crosshair {
-  margin: 20px auto;
+.loader {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 999;
+  display: none;
 }
 
-.crosshair .link-effect a {
-  color: #666;
-  padding: 10px 20px;
-  position: relative;
-  overflow: hidden;
-  display: inline-block;
-  transition: all 0.3s ease-out;
-  font-size: 2em;
+.loader-inner {
+  display: block;
+  width: 50px;
+  height: 50px;
+  border: 5px solid #ededed;
+  border-radius: 50%;
+  border-top: 5px solid #3498db;
+  animation: rotate 1.5s linear infinite;
 }
 
-.crosshair .link-effect a span::before {
-  width: 5px;
-  height: 5px;
-  background: transparent;
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 0;
-  border-top: 2px solid #3498db;
-  border-left: 2px solid #3498db;
-  transition: all 0.3s;
-  opacity: 0;
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
-.crosshair .link-effect a span::after {
-  width: 5px;
-  height: 5px;
-  background: transparent;
-  content: '';
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  border-right: 2px solid #3498db;
-  border-bottom: 2px solid #3498db;
-  transition: all 0.3s;
-  opacity: 0;
+.loader.visible {
+  display: block;
 }
 
-.crosshair .link-effect a::before {
-  width: 5px;
-  height: 5px;
-  background: transparent;
-  content: '';
-  position: absolute;
-  right: 0;
-  top: 0;
-  border-right: 2px solid #396684;
-  border-top: 2px solid #3498db;
-  transition: all 0.3s;
-  opacity: 0;
+form{
+  width: 50%;
+  margin: 0 auto;
 }
-
-.crosshair .link-effect a::after {
-  width: 5px;
-  height: 5px;
-  background: transparent;
-  content: '';
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  border-left: 2px solid #3498db;
-  border-bottom: 2px solid #3498db;
-  transition: all 0.3s;
-  opacity: 0;
-}
-
-.crosshair .link-effect a:hover {
-  color: #3498db;
-}
-
-.crosshair .link-effect a:hover::before {
-  opacity: 1;
-  right: 5px;
-  top: 5px;
-}
-
-.crosshair .link-effect a:hover::after {
-  opacity: 1;
-  left: 5px;
-  bottom: 5px;
-}
-
-.crosshair .link-effect a:hover span::before {
-  opacity: 1;
-  left: 5px;
-  top: 5px;
-}
-
-.crosshair .link-effect a:hover span::after {
-  opacity: 1;
-  right: 5px;
-  bottom: 5px;
-}
-
 
 footer {
   background-color: #333;
@@ -159,6 +91,6 @@ footer a {
   display: inline-block;
 }
 
-footer a:last-child{
+footer a:last-child {
   margin-right: 0;
 }
