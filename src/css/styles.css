@@ -43,7 +43,7 @@ h1 {
   text-align: center;
 }
 
-#search-form input[type="text"] {
+#search-form input[type='text'] {
   width: 80%;
   padding: 10px;
   border: 1px solid #00a2ff;
@@ -85,20 +85,17 @@ h1 {
   transform: scale(1.05);
 }
 
-.info {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 10px;
+.gallery.info {
+  display: flex;
 }
 
-.info-item {
-  text-align: center;
-  font-weight: bold;
+.gallery.info.info-item {
+  flex: 1;
 }
 
-.info-item b {
+.gallery.info.info-item b {
   display: block;
-  margin-bottom: 5px;
+  margin-bottom: 1px;
 }
 
 .loader {
@@ -130,7 +127,7 @@ h1 {
   display: block;
 }
 
-form{
+form {
   width: 50%;
   margin: 0 auto;
 }
