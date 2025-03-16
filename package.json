@@ -17,6 +17,7 @@
   "author": "Andrii Grygorov <andygrigs88@gmail.com>",
   "license": "ISC",
   "dependencies": {
+    "axios": "^1.8.3",
     "flatpickr": "^4.6.13",
     "izitoast": "^1.4.0",
     "simplelightbox": "^2.14.3",
