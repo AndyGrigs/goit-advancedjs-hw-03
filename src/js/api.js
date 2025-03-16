@@ -8,7 +8,6 @@ export async function loadImages(query) {
         q: query,
         image_type: "photo",
         orientation: "horizontal",
-        sefesearch: "true"
     });
 
     const response = await fetch(`${BASE_URL}?${params}`);

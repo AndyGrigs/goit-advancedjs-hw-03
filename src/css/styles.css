@@ -37,6 +37,54 @@ h1 {
   text-align: center;
 }
 
+#search-form {
+  max-width: 400px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+#search-form input[type="text"] {
+  width: 80%;
+  padding: 10px;
+  border: 1px solid #00a2ff;
+  font-size: 16px;
+  margin-bottom: 2em;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+#search-form button {
+  background-color: #00a2ff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 8px;
+  margin-bottom: 2em;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+#search-form button:hover {
+  background-color: #0056b3;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.gallery img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
+}
+
 .loader {
   position: fixed;
   top: 50%;

@@ -45,12 +45,15 @@ async function doSearchPhotos(e) {
 
     const imagesHtml = createPthotsHtml(data.hits);
     refs.gallery.insertAdjacentHTML('beforeend', imagesHtml);
+    refs.form.reset();
+
 
     if (!lightbox) {
-      lightbox = new SimpleLightbox('.gallery a');
+      lightbox = new SimpleLightbox(".gallery a", {close: true});
     } else {
       lightbox.refresh();
     }
+
   } catch (error) {
     hideLoader();
     console.error(error);
