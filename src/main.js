@@ -1,11 +1,11 @@
-import { loadImages } from './api';
 
 import iziToast from 'izitoast';
 import 'izitoast/dist/css/iziToast.min.css';
 
 import SimpleLightbox from 'simplelightbox';
 import 'simplelightbox/dist/simple-lightbox.min.css';
-import { createPthotsHtml } from './render';
+import { loadImages } from './js/pixabay-api';
+import { createPthotsHtml } from './js/render-functions';
 
 const refs = {
   form: document.querySelector('#search-form'),

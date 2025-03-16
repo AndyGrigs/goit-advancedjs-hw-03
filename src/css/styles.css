@@ -85,6 +85,22 @@ h1 {
   transform: scale(1.05);
 }
 
+.info {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 10px;
+}
+
+.info-item {
+  text-align: center;
+  font-weight: bold;
+}
+
+.info-item b {
+  display: block;
+  margin-bottom: 5px;
+}
+
 .loader {
   position: fixed;
   top: 50%;
